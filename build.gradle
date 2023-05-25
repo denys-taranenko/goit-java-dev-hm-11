@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.goit'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.google.guava:guava:31.0.1-jre'
+    implementation 'com.h2database:h2:2.1.212'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    implementation 'org.hibernate.orm:hibernate-core:6.1.0.Final'
+    implementation 'org.flywaydb:flyway-mysql:8.5.13'
+}
+
+test {
+    useJUnitPlatform()
+}
